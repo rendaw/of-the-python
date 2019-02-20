@@ -4,5 +4,5 @@ steps:
    (New-Object System.Net.WebClient).DownloadFile("https://www.python.org/ftp/python/3.7.2/python-3.7.2-amd64.exe", "python.msi")
    $pwd = (Resolve-Path .\).Path
    ls
-   & python.msi /quiet TargetDir=$pwd\python AssociateFiles=0 Shortcuts=0 Include_doc=0 Include_launcher=0
+   ./python.msi /quiet TargetDir=$pwd\python AssociateFiles=0 Shortcuts=0 Include_doc=0 Include_launcher=0
   displayName: 'Build'
