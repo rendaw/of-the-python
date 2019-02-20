@@ -1,0 +1,6 @@
+steps:
+- powershell: |
+   (New-Object System.Net.WebClient).DownloadFile("https://www.python.org/ftp/python/2.7.16/python-2.7.16rc1.amd64.msi", "python.msi")
+   $pwd = (Resolve-Path .\).Path
+   python.msi /quiet TargetDir=$pwd\python AssociateFiles=0 Shortcuts=0 Include_doc=0 Include_launcher=0
+  displayName: 'Download/install python'
